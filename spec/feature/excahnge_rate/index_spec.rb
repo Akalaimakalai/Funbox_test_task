@@ -7,7 +7,7 @@ feature 'Guest can see exchange rate of USD', %q{
 } do
   given!(:valute) { create(:exchange_rate) }
 
-  scenario 'user visit root page' do
+  scenario 'guest visit root page' do
     visit root_path
 
     expect(page).to have_content valute.name
