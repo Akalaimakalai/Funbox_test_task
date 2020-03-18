@@ -28,6 +28,9 @@ module Funbox
                         routing_specs: false,
                         request_specs: false,
                         controller_specs: true
+      g.resource_controller :controller,
+                             helper: false,
+                             assets: false
     end
 
     # ---END---
