@@ -44,6 +44,8 @@ gem 'sidekiq', '< 6'
 gem 'sinatra', require: false
 # Whenever is a Ruby gem that provides a clear syntax for writing and deploying cron jobs.
 gem 'whenever', require: false
+# JS Framework
+gem 'jquery-rails'
 
 # ---END---
 
