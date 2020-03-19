@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_18_000214) do
+ActiveRecord::Schema.define(version: 2020_03_19_024541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dummies", force: :cascade do |t|
+    t.float "value", null: false
+    t.datetime "deadline", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "exchange_rates", force: :cascade do |t|
     t.string "name", null: false
