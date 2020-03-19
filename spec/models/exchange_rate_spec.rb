@@ -6,11 +6,11 @@ RSpec.describe ExchangeRate, type: :model do
 
   context "if value = nil" do
     before { allow(subject).to receive(:value).and_return(nil) }
-    it { should_not validate_numericality_of(:value) }
+    it { should_not validate_numericality_of(:value).is_greater_than(0) }
   end
 
   context "if value = something" do
     before { allow(subject).to receive(:value).and_return("NotNill") }
-    it { should validate_numericality_of(:value) }
+    it { should validate_numericality_of(:value).is_greater_than(0) }
   end
 end
