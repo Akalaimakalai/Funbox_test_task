@@ -18,6 +18,7 @@ RSpec.describe DummiesController, type: :controller do
   describe 'POST #create' do
 
     context 'with valid attributes' do
+      let!(:valute) { create(:exchange_rate, :usd) }
 
       it 'saves dummy' do
         expect { post :create, params: { dummy: attributes_for(:dummy) }, format: :js }.to change(Dummy, :count).by(1)

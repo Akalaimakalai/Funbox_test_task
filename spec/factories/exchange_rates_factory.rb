@@ -13,4 +13,8 @@ FactoryBot.define do
     char_code
     value { 42.00 }
   end
+
+  trait :usd do
+    char_code { "USD" }
+  end
 end
