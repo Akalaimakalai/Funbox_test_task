@@ -6,7 +6,7 @@ feature 'Guest can create fake exchange rate for USD', %q{
   I'd like to be able to create fake exchange rate
 }, js: true do
 
-  given!(:valute) { create(:exchange_rate, :usd) }
+  given!(:currency) { create(:exchange_rate, :usd) }
 
   describe 'User creates dummy' do
 
@@ -20,9 +20,9 @@ feature 'Guest can create fake exchange rate for USD', %q{
 
       visit root_path
 
-      expect(page).to have_content valute.name
-      expect(page).to have_content valute.char_code
-      expect(page).to_not have_content valute.value
+      expect(page).to have_content currency.name
+      expect(page).to have_content currency.char_code
+      expect(page).to_not have_content currency.value
       expect(page).to have_content 999.99
     end
 

@@ -5,7 +5,7 @@ RSpec.describe ExchangeRate, type: :model do
   it { should validate_presence_of :char_code }
 
   context 'validate_uniqueness' do
-    let!(:valute) { create(:exchange_rate) }
+    let!(:currency) { create(:exchange_rate) }
     it { should validate_uniqueness_of(:char_code) }
   end
 

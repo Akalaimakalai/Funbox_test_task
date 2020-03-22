@@ -18,7 +18,7 @@
 # end
 
 every 1.day do
-  runner "DayliUpdateJob.perform_now"
+  runner "DailyUpdateJob.perform_now"
 end
 
 # Learn more: http://github.com/javan/whenever

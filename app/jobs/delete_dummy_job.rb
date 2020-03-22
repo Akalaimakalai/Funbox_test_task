@@ -1,4 +1,4 @@
-class DieDummyJob < ApplicationJob
+class DeleteDummyJob < ApplicationJob
   queue_as :default
 
   def perform(dummy)
