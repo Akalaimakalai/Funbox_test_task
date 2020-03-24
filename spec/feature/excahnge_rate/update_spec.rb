@@ -9,7 +9,7 @@ feature 'User can immediately see updated Exchange rate ', %q{
   describe 'Multiple sessions' do
     given!(:currency) { create(:exchange_rate, :usd) }
 
-    scenario "question appears on another user's page" do
+    scenario "new exchange rate appears on another user's page" do
       Capybara.using_session('user') do
         visit root_path
         expect(page).to have_content currency.value
