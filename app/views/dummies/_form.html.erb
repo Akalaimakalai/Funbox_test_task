@@ -1,16 +1,19 @@
-  <%= form_with model: dummy, url: dummies_path do |form| %>
-    <div class="dummy_errors">
-      <%= render "shared/error_messages", resource: dummy %>
-    </div>
-    <p>
-      <%= form.label :value %>:
-      <%= form.number_field :value, step: :any %>
-    </p>
+<div class="card rounded bg-light border-dark">
+  <div class="card-body">
+    <%= form_with model: dummy, url: dummies_path, method: :post do |form| %>
+      <div class="form_group ">
+        <p>
+          <%= form.label :value %>:
+          <%= form.number_field :value, step: :any, class: "form-control" %>
+        </p>
 
-    <p>
-      <%= form.label :deadline %>:
-      <%= form.datetime_select :deadline %>
-    </p>
+        <p>
+          <%= form.label :deadline %>: <br>
+          <%= form.datetime_select :deadline, class: "form-control" %>
+        </p>
 
-    <p><%= form.submit 'Create' %></p>
-  <% end %>
+        <p><%= form.submit 'Create', class: "btn btn-success mt-2" %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

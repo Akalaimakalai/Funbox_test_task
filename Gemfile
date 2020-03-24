@@ -46,6 +46,8 @@ gem 'sinatra', require: false
 gem 'whenever', require: false
 # JS Framework
 gem 'jquery-rails'
+# CSS Framework
+gem 'bootstrap', '~> 4.4.1'
 
 # ---END---
 

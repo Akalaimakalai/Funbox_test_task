@@ -7,4 +7,4 @@ App.exchange_rates = App.cable.subscriptions.create "ExchangeRatesChannel",
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    $('.exchange_rates').html(data)
+    $('.exchange_rates').replaceWith(data)
