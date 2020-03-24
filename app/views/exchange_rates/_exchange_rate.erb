@@ -1,4 +1,5 @@
-<p>
-  <%= exchange_rate.name %> <br>
-  <%= exchange_rate.char_code %>: <%= exchange_rate.fake_value || exchange_rate.value %>
-<p>
+<tr>
+  <th scope="row" class="align-middle"><%= exchange_rate.name %> <br></th>
+  <td class="align-middle"><%= exchange_rate.char_code %></td>
+  <td class="align-middle"><%= exchange_rate.fake_value || exchange_rate.value %></td>
+</tr>
