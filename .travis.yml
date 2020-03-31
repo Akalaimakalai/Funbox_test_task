@@ -8,4 +8,4 @@ branches:
     - travis
 
 script:
-  - bundle exec bin/setup
+  - bin/setup
