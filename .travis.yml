@@ -7,8 +7,11 @@ branches:
     - master
     - travis
 
-addons:
-    postgresql: "10"
+services:
+  - postgresql
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
 
 script:
   - bin/setup
