@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Akalaimakalai/Funbox_test_task.svg?branch=master)](https://travis-ci.org/Akalaimakalai/Funbox_test_task)
+
 # Funbox test task
 
 Applications for viewing the dollar to ruble exchange rate. With the ability to create your own exchange rate.
