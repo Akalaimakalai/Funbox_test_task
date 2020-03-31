@@ -15,5 +15,5 @@ before_script:
 
 script:
   - bin/setup
-  - bundle exec rspec
+  - RAILS_ENV=test bundle exec rspec
   - bin/startup
