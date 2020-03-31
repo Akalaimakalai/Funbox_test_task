@@ -43,17 +43,12 @@ Also, you need <a href="https://redis.io/topics/quickstart" target="_blank">redi
 
 ### Installing
 
-After cloning the repository run the command
-``` $ bundle install ```
-If you want to use <a href="http://ddollar.github.io/foreman/" target="_blank">foreman</a>, please install it with
-``` $ gem install foreman ```
-And run app with comand
-``` $ foreman start -f Procfile.dev ```
-instead classic
-``` $ sidekiq ```
-``` $ rails s ```
+The App can be installed with ```bin/setup``` command.
+
+### Running
+
+The App can be run with  ```bin/starup``` command.
 
 ## Running the tests
 
-I use <a href="https://github.com/rspec/rspec-rails" target="_blank">rspec</a> for testing. You can run them with
-``` $ rspec spec/ ```
+Tests can be run with ```rspec spec/``` command.
