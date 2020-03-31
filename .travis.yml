@@ -18,5 +18,5 @@ before_script:
 
 script:
   - bin/setup
+  - xvfb-run -a bundle exec rails db:reset db:migrate
   - xvfb-run -a bundle exec rspec
-  - bin/startup
