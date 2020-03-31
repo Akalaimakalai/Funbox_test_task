@@ -7,5 +7,8 @@ branches:
     - master
     - travis
 
+addons:
+    postgresql: "10"
+
 script:
   - bin/setup
