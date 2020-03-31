@@ -1,0 +1,22 @@
+language: ruby
+
+rvm: 2.6.5
+
+branches:
+  only:
+    - master
+    - travis
+
+services:
+  - postgresql
+  - redis-server
+addons:
+  chrome: stable
+
+before_script:
+  - cp config/database.yml.sample config/database.yml
+
+script:
+  - bin/setup
+  - xvfb-run -a bundle exec rails db:test:purge db:test:prepare
+  - xvfb-run -a bundle exec rspec
